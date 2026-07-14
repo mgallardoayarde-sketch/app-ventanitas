@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <title>Aplicación Preventiva de Pedidos</title>
 
-<meta http-equiv="refresh" content="0; url=https://www.appsheet.com/newshortcut/1987386e-34de-45ce-8af9-ce52e6d4ce47">
+<script>
+window.location.href = "https://www.appsheet.com/newshortcut/1987386e-34de-45ce-8af9-ce52e6d4ce47";
+</script>
 
 </head>
 
