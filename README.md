@@ -5,7 +5,7 @@
 <title>Aplicación Preventiva de Pedidos</title>
 
 <script>
-window.location.href = "https://www.appsheet.com/newshortcut/1987386e-34de-45ce-8af9-ce52e6d4ce47";
+window.location.href = "https://www.appsheet.com/start/b1268b08-c341-4aee-83ff-87b7cf3c1412";
 </script>
 
 </head>
