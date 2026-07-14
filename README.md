@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+# Aplicación Ventanitas
 
-<title>Aplicación Preventiva de Pedidos</title>
+## Descripción
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
-}
+Aplicación desarrollada en AppSheet para la visualización y gestión preventiva de pedidos, permitiendo consultar información de clientes, pedidos y facilitar el seguimiento de entregas.
 
-h1 {
-    color: #333;
-}
+## Objetivo del proyecto
 
-button {
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-}
+Mejorar la visibilidad del proceso de entrega mediante una herramienta digital que permita al equipo operativo y comercial consultar información actualizada y tomar acciones preventivas.
 
-button:hover {
-    opacity: 0.8;
-}
-</style>
+## Funcionalidades principales
 
-</head>
+- Visualización de clientes.
+- Consulta de pedidos asociados a clientes.
+- Organización de información por territorio.
+- Consulta de horarios de entrega.
+- Confirmación y actualización de información.
+- Apoyo al seguimiento preventivo de entregas.
 
-<body>
+## Tecnologías utilizadas
 
-<h1>Aplicación Preventiva de Pedidos</h1>
+- AppSheet (desarrollo de aplicación móvil/web).
+- Excel (base de datos y almacenamiento de información).
+- GitHub Pages (publicación del acceso web).
 
-<p>Ingresa a la aplicación haciendo clic aquí:</p>
-
-<a href="https://www.appsheet.com/start/b1268b08-c341-4aee-83ff-87b7cf3c1412" target="_blank">
-<button>
-Abrir Aplicación
-</button>
-</a>
-
-</body>
-</html>
+## Estructura del proyecto
