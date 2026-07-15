@@ -2,27 +2,83 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://www.appsheet.com/start/1987386e-34de-45ce-8af9-ce52e6d4ce47">
-    <title>Cargando Ventanitas App...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias del Pago - Ventanitas</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
+            color: #333;
         }
-        .loader {
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .logo {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        p {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1a73e8;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(26, 115, 232, 0.2);
+        }
+        .btn:hover {
+            background-color: #1557b0;
+            transform: translateY(-2px);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
-    <div class="loader">
-        <h2>Cargando Ventanitas App...</h2>
-        <p>Si no eres redirigido automáticamente, <a href="https://www.appsheet.com/start/1987386e-34de-45ce-8af9-ce52e6d4ce47">haz clic aquí</a>.</p>
+
+    <div class="card">
+        <div class="logo">🧁</div>
+        <h1>Delicias del Pago</h1>
+        <p>Bienvenido al portal interno de distribución <strong>Ventanitas</strong>. Presiona el botón de abajo para acceder de forma segura a tu lista de clientes y territorios.</p>
+        
+        <a href="https://www.appsheet.com/start/1987386e-34de-45ce-8af9-ce52e6d4ce47" class="btn" target="_blank">Ingresar a la App</a>
+        
+        <div class="footer">
+            © 2026 Delicias del Pago. Todos los derechos reservados.
+        </div>
     </div>
+
 </body>
 </html>
