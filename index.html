@@ -1,9 +1,10 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicias del Pago - Ventanitas</title>
+    <title>Ventanitas planta - Acceso Interno</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,13 +17,13 @@
             height: 100vh;
             color: #333;
         }
-        .card {
+        .login-card {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
-            max-width: 400px;
+            max-width: 360px;
             width: 90%;
         }
         .logo {
@@ -30,34 +31,66 @@
             margin-bottom: 10px;
         }
         h1 {
-            font-size: 24px;
-            margin: 10px 0;
+            font-size: 22px;
+            margin: 10px 0 5px 0;
             color: #2c3e50;
         }
-        p {
+        h2 {
             font-size: 14px;
+            font-weight: normal;
             color: #7f8c8d;
-            margin-bottom: 30px;
-            line-height: 1.5;
+            margin-bottom: 25px;
         }
-        .btn {
-            display: inline-block;
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            font-size: 12px;
+            font-weight: bold;
+            color: #7f8c8d;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border 0.3s ease;
+        }
+        input:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+        .btn-login {
+            width: 100%;
             background-color: #1a73e8;
             color: white;
-            padding: 14px 28px;
+            border: none;
+            padding: 14px;
             font-size: 16px;
             font-weight: bold;
-            text-decoration: none;
             border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
             transition: background 0.3s ease, transform 0.2s ease;
             box-shadow: 0 4px 6px rgba(26, 115, 232, 0.2);
         }
-        .btn:hover {
+        .btn-login:hover {
             background-color: #1557b0;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
-        .btn:active {
+        .btn-login:active {
             transform: translateY(0);
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 15px;
+            display: none;
         }
         .footer {
             margin-top: 30px;
@@ -68,17 +101,50 @@
 </head>
 <body>
 
-    <div class="card">
+    <div class="login-card">
         <div class="logo">🧁</div>
-        <h1>Delicias del Pago</h1>
-        <p>Bienvenido al portal interno de distribución <strong>Ventanitas</strong>. Presiona el botón de abajo para acceder de forma segura a tu lista de clientes y territorios.</p>
+        <h1>Ventanitas Planta</h1>
+        <h2>Portal de Distribución Ventanitas</h2>
         
-        <a href="https://www.appsheet.com/start/1987386e-34de-45ce-8af9-ce52e6d4ce47" class="btn" target="_blank">Ingresar a la App</a>
+        <form id="loginForm" onsubmit="validarAcceso(event)">
+            <div class="input-group">
+                <label for="username">USUARIO</label>
+                <input type="text" id="username" placeholder="Ingresa tu usuario" required autocomplete="off">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">CONTRASEÑA</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn-login">Iniciar Sesión</button>
+            
+            <div id="error" class="error-message">Usuario o contraseña incorrectos.</div>
+        </form>
         
         <div class="footer">
-            © 2026 Delicias del Pago. Todos los derechos reservados.
+            © 2026 Ventanitas Planta. Acceso Restringido.
         </div>
     </div>
+
+    <script>
+        function validarAcceso(event) {
+            event.preventDefault(); // Evita que se recargue la página por defecto
+            
+            var user = document.getElementById("username").value.trim();
+            var pass = document.getElementById("password").value;
+            var errorDiv = document.getElementById("error");
+
+            // Configura aquí tus credenciales y el link directo a tu AppSheet
+            if (user === "ventanitas" && pass === "Planta2026") {
+                errorDiv.style.display = "none";
+                window.location.href = "https://www.appsheet.com/start/1987386e-34de-45ce-8af9-ce52e6d4ce47";
+            } else {
+                errorDiv.style.display = "block";
+                document.getElementById("password").value = ""; // Limpia el campo de contraseña en caso de error
+            }
+        }
+    </script>
 
 </body>
 </html>
